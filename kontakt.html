@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="sr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="slike/logo.png" />
+
+    <title>Kontakt - Apple Telefoni Prodaja</title>
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 1rem 0;
+      }
+      nav {
+        background-color: #f2f2f2;
+        padding: 1rem 0;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        margin: 0 15px;
+      }
+      nav ul li a {
+        color: #333;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .contact-info,
+      .contact-form {
+        margin-bottom: 2rem;
+      }
+      .contact-form form {
+        display: grid;
+        gap: 1rem;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .contact-form button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .contact-form button:hover {
+        background-color: #333;
+      }
+      .map {
+        height: 400px;
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Apple Telefoni Prodaja</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Početna</a></li>
+        <li><a href="onama.html">O nama</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>Kontaktirajte nas</h2>
+
+      <div class="contact-info">
+        <h3>Informacije o kontaktu</h3>
+        <p><strong>Adresa:</strong> Nikola Tesla 11, Čačak</p>
+        <p><strong>Telefon:</strong> +381 65 333 888</p>
+        <p><strong>Email:</strong> info@appletelefoni.rs</p>
+        <p>
+          <strong>Radno vreme:</strong> Ponedeljak - Petak: 9:00 - 20:00,
+          Subota: 10:00 - 15:00
+        </p>
+      </div>
+
+      <div class="contact-form">
+        <h3>Pošaljite nam poruku</h3>
+        <form>
+          <input type="text" name="name" placeholder="Vaše ime" required />
+          <input type="email" name="email" placeholder="Vaš email" required />
+          <input type="tel" name="phone" placeholder="Vaš broj telefona" />
+          <textarea
+            name="message"
+            placeholder="Vaša poruka"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Pošalji poruku</button>
+        </form>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.42492017403!2d20.3696691!3d43.8884654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47577261aab17d89%3A0x5cde6fb6eb8d3d15!2z0J3QuNC60L7Qu9C1INCi0LXRgdC70LUsINCn0LDRh9Cw0Lo!5e0!3m2!1ssr!2srs!4v1720119768077!5m2!1ssr!2srs"
+          width="1000"
+          height="600"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Hvala na poruci! Odgovorićemo vam u najkraćem mogućem roku.");
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
